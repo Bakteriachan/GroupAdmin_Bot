@@ -26,7 +26,7 @@ async def start(client, message):
     await message.reply_text(f'Hola {name}, puedo ayudarte a administrar tus grupos.',
     reply_markup=InlineKeyboardMarkup([[
         InlineKeyboardButton("🗯 Ayuda 🗯", callback_data="helpp")],
-        [InlineKeyboardButton("➕ Agregarme al grupo ➕", url="http://t.me/Munkake_Bot?startgroup=add")
+        [InlineKeyboardButton("➕ Agregarme al grupo ➕", url="http://t.me/Munkake_Bot?startgroup=start")
 
     ]]))
 #comando callback de menu
