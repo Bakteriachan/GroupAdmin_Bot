@@ -29,4 +29,6 @@ Bot hecho con Pyrogram, pueden pueden leer más en la documentación https://doc
 
 ## Jean_Munkake
 
+Son Bienvenidos de entrar a mi canal en Telegram donde publico más proyectos similares a este 👏🏻👏🏻
+
 <details> <summary><b>Telegram Channel</b></summary><br> <a href="https://t.me/Jean_Munkake" ><img alt="Telegram" src="https://img.shields.io/badge/Jean Munkake-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white"/> </a> </details>
