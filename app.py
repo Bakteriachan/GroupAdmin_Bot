@@ -2,12 +2,22 @@ from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
 
 
+class config :
+	
+	TOKEN = os.environ ["TOKEN"]
+	API_ID = int (os.environ ["API_ID"])
+	API_HASH = os.environ ["API_HASH"]
+
+
 
 app = Client(
 "Tasky",
-api_id= 7172397,
-api_hash= "5d591f9c050e82c034164117a58eb2be",
-bot_token= "5039909772:AAGsY3WQWcSxDZFbqza1bNR6IiPe8DRYmQQ")
+api_id=config.API_ID,
+api_hash=config.API_HASH,
+bot_token=config.TOKEN)
+
+
+
 
 
 @app.on_message(filters.command("start"))
