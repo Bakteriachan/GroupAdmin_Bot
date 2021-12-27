@@ -23,7 +23,7 @@ bot_token=config.TOKEN)
 @app.on_message(filters.command("start"))
 async def start(client, message):
     name = message.from_user.first_name
-    await message.reply_text(f'Hola {name}, puedo ayudarte a administrar tus grupos.\n\nUsa /commands para ver los comandos disponibles.',
+    await message.reply_text(f'Hola {name}, puedo ayudarte a administrar tus grupos.',
     reply_markup=InlineKeyboardMarkup([[
         InlineKeyboardButton("🗯 Ayuda 🗯", callback_data="helpp")],
         [InlineKeyboardButton("➕ Agregarme al grupo ➕", url="http://t.me/Munkake_Bot?startgroup=add")
@@ -33,7 +33,7 @@ async def start(client, message):
 @app.on_callback_query(filters.regex("menu"))
 async def help(client, query):
     name = query.from_user.first_name
-    await query.message.edit_text(f'Hola {name}, puedo ayudarte a administrar tus grupos.\n\nUsa /commands para ver los comandos disponibles.',
+    await query.message.edit_text(f'Hola {name}, puedo ayudarte a administrar tus grupos.',
     reply_markup=InlineKeyboardMarkup([[
         InlineKeyboardButton("🗯 Ayuda 🗯", callback_data="helpp")],
         [InlineKeyboardButton("➕ Agregarme al grupo ➕", url="http://t.me/Munkake_Bot?startgroup=add")
@@ -54,7 +54,7 @@ async def help(client, query):
 @app.on_callback_query(filters.regex("commands"))
 async def commands(client, query):
     name = query.from_user.first_name
-    await query.message.edit_text(f'/pin - Responde a un mensaje con este comando en el chat para fijarlo\n\n/unpin - Responde a un mensaje fijado en el chat para desfijarlo\n\n/unpinall - Usar este comando en el chat desfija todos los mensajes fijados\n\n/ban - Responde al mensaje de un usuario en el chat para darle Ban\n\n/unban - responde al mensaje de un usuario baneado en el chat para retirarle el Ban',
+    await query.message.edit_text(f'❕La mayoría de los comandos solo son utilizables por administradores del chat.\n\n\n/pin - Responde a un mensaje con este comando en el chat para fijarlo\n\n/unpin - Responde a un mensaje fijado en el chat para desfijarlo\n\n/unpinall - Usar este comando en el chat desfija todos los mensajes fijados\n\n/ban - Responde al mensaje de un usuario en el chat para darle Ban\n\n/unban - responde al mensaje de un usuario baneado en el chat para retirarle el Ban\n\n/link - Muestra el enlace del chat',
     reply_markup=InlineKeyboardMarkup([[
         InlineKeyboardButton("❕Menú❕", callback_data="menu")
     ]]))
