@@ -114,6 +114,19 @@ async def pin(client, message):
         await message.reply(f"Se fijo el mensaje")
     else:
         await message.reply(f"No tienes permisos de admin")
+	
+#comando id -> muestra un mensaje con el id del usuario
+@app.on_message(filters.command("id"))
+asyn def myid(client, message):
+	try:
+		if type(message.reply_to_message) != type(None):
+			user_id = message.reply_to_message.from_user.id
+		else:
+			user_id = message.from_user.id
+	except:
+		return -1
+	await message.reply(f'El id del usuario es {user_id}')
+
 
 # Comando unpin
 @app.on_message(filters.command("unpin"))
