@@ -25,7 +25,7 @@
 
 ## Información
 
-Bot hecho con Pyrogram, pueden pueden leer más en la documentación https://docs.pyrogram.org
+Bot hecho con Pyrogram, pueden leer más en la documentación https://docs.pyrogram.org
 
 ## Jean_Munkake
 
